@@ -1,3 +1,8 @@
+# NOTE:
+This is a fork of the [skip-thoughts](https://github.com/ryankiros/skip-thoughts) repo, modified to make it easier to install from github so I can experiment with it in my own analysis pipelines. The original README contents is preserved below.
+
+-------------
+
 # skip-thoughts
 
 Sent2Vec encoder and training code from the paper [Skip-Thought Vectors](http://arxiv.org/abs/1506.06726).
