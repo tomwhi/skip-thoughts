@@ -1,0 +1,8 @@
+theano
+# Numpy and scipy pip installs problematic; currently installing these using conda instead.
+#numpy
+#scipy
+scikit-learn
+nltk==3
+keras
+gensim

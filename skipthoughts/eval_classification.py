@@ -1,14 +1,12 @@
 # Experiment scripts for binary classification benchmarks (e.g. MR, CR, MPQA, SUBJ)
 
-import numpy as np
-import sys
 import nbsvm
-import dataset_handler
-
+import numpy as np
 from scipy.sparse import hstack
-
-from sklearn.linear_model import LogisticRegression
 from sklearn.cross_validation import KFold
+from sklearn.linear_model import LogisticRegression
+
+from skipthoughts import dataset_handler
 
 
 def eval_nested_kfold(encoder, name, loc='./data/', k=10, seed=1234, use_nb=False):
@@ -102,11 +100,11 @@ def compute_nb(X, y, Z):
     labels = [int(t) for t in y]
     ptrain = [X[i] for i in range(len(labels)) if labels[i] == 0]
     ntrain = [X[i] for i in range(len(labels)) if labels[i] == 1]
-    poscounts = nbsvm.build_dict(ptrain, [1,2])
-    negcounts = nbsvm.build_dict(ntrain, [1,2])
+    poscounts = nbsvm.build_dict(ptrain, [1, 2])
+    negcounts = nbsvm.build_dict(ntrain, [1, 2])
     dic, r = nbsvm.compute_ratio(poscounts, negcounts)
-    trainX = nbsvm.process_text(X, dic, r, [1,2])
-    devX = nbsvm.process_text(Z, dic, r, [1,2])
+    trainX = nbsvm.process_text(X, dic, r, [1, 2])
+    devX = nbsvm.process_text(Z, dic, r, [1, 2])
     return trainX, devX
 
 
