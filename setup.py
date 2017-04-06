@@ -8,6 +8,6 @@ install_reqs = parse_requirements("requirements.txt", session=False)
 reqs = [str(ir.req) for ir in install_reqs if ir.req is not None]
 
 setup(name='skipthoughts',
-      install_requires=reqs,
-      packages=find_packages()
+      packages=find_packages(exclude=('tests*', 'docs', 'examples')),
+      install_requires=reqs
       )

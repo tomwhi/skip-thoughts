@@ -15,6 +15,7 @@ from collections import OrderedDict, defaultdict
 from scipy.linalg import norm
 from nltk.tokenize import word_tokenize
 
+
 profile = False
 
 #-----------------------------------------------------------------------------#
@@ -161,7 +162,7 @@ def encode(model, X, use_norm=True, verbose=True, batch_size=128, use_eos=False)
             for ind, c in enumerate(caps):
                 ufeatures[c] = uff[ind]
                 bfeatures[c] = bff[ind]
-    
+
     features = numpy.c_[ufeatures, bfeatures]
     return features
 
@@ -436,5 +437,3 @@ def gru_layer(tparams, state_below, options, prefix='gru', mask=None, **kwargs):
                                 strict=True)
     rval = [rval]
     return rval
-
-
