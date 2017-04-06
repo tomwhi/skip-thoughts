@@ -21,8 +21,8 @@ profile = False
 #-----------------------------------------------------------------------------#
 # Specify model and table locations here
 #-----------------------------------------------------------------------------#
-path_to_models = '/Volumes/TomsDisk/Projects/thoughtvec/sent2vec'
-path_to_tables = '/Volumes/TomsDisk/Projects/thoughtvec/sent2vec'
+path_to_models = '/Volumes/TomsDisk/Projects/thoughtvec/sent2vec/'
+path_to_tables = '/Volumes/TomsDisk/Projects/thoughtvec/sent2vec/'
 #-----------------------------------------------------------------------------#
 
 path_to_umodel = path_to_models + 'uni_skip.npz'
